@@ -1,0 +1,10 @@
+.App{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: "site-font";
+    src: local('STAM'),url(./font/FTLTLT.TTF);
+    }
+

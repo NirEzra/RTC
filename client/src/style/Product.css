@@ -1,0 +1,8 @@
+
+.LatestProductMain{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: auto;
+}
