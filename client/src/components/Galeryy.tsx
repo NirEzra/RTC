@@ -7,9 +7,10 @@ export default function Galeryy() {
 
   useEffect(() => {
     setImages(
-      Array.from(Array(8).keys()).map((id) => ({
+      Array.from(Array(7).keys()).map((id) => ({
         id,
         url: `https://picsum.photos/1000?random=${id}`
+        // url: `gs://ecommerceshop-2d13b.appspot.com`
       }))
     );
   }, []);

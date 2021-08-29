@@ -33,10 +33,10 @@ function HomePage() {
                 </div>
             </div>
             <About />
-            {/* <Gallery /> */}
+            
             
             <Galeryy />
-          <ContactUs />
+          {/* <ContactUs /> */}
             {/* <LatestProducts/> */}
             <Footer />
            

@@ -11,7 +11,8 @@ export default function About() {
 </div>
 
 <div className="aboutText" dir="rtl">
-<h5>
+    <div className="innerAboutText">
+        <h5>
 אנו שמחים שהחלטת לפנק את עצמך עם מפה יוקרתית מבית RTC
  המותג שהפך אצל משפחות שלמות את שולחן השבת והחג.
 אז דקה מזמנך ואספר לך קצת אודותינו
@@ -25,8 +26,10 @@ export default function About() {
 חשוב לי שכל לקוי יצא מרוצה בכל עת תוכלי לפנות אלי ישירות ותוכלי לקבל מענה  מידי
 לכל מה שתרצי.
 0584166447
-שלכם רחלי rtc
+שלכם רחלי RTC המותג
 </h5>
+    </div>
+
 </div>
 
         </div>

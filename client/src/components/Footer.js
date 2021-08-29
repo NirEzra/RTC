@@ -12,6 +12,8 @@ export default function Footer() {
           <p className='footer-subscription-heading'>
           Rachel Table Cloth
           </p>
+
+          <img src="/pictures/logoNobg.png" alt="" />
           <p className='footer-subscription-text'>
           Join Our Newsletter        </p>
           <div className='input-areas'>
@@ -26,37 +28,32 @@ export default function Footer() {
             </form>
           </div>
         </section>
+        
         <div className='footer-links'>
+
             <div className='footer-link-items'>
             <h2>About</h2>
-              <Link to='/sign-up'>About Us</Link>
+              <Link to='/about'>About Us</Link>
               <Link to='/'>Our Work</Link>
               <Link to='/'>Connection</Link>
               <Link to='/'>Terms of Service</Link>
             </div>
+            
             <div className='footer-link-items'>
             <h2>Contact</h2>
-              <Link to='/'> Phone</Link>
-              <Link to='/'>Cellular</Link>
-              <Link to='/'>Fax</Link>
-              <Link to='/'> Support</Link>
+              <Link to='/'> 0584166447</Link>
+              <Link to='/'>0504166445</Link>
+              <Link to='/'>r0584166447@gmail.com </Link>
             </div>
-         
-          <div className='footer-link-wrapper'>
+
             <div className='footer-link-items'>
             <h2>Shop </h2>
-              <Link to='/'>Table Maps</Link>
-              <Link to='/'>Napkins</Link>
-              <Link to='/Galeryy'>Gallery</Link>
+              <Link to='/shop'>Table Maps</Link>
+              <Link to='/shop'>Napkins</Link>
+              <Link to='/gallery'>Gallery</Link>
             </div>
-            <div className='footer-link-items'>
-              <h2>Social</h2>
-              <a href="https://www.instagram.com/techcareer">Instagram </a>
-              <a href="https://www.facebook.com/tech.career">Facebook </a>
-              <a href="https://www.youtube.com/channel/UCVNITxGQ4M_Ze5hxv36B40Q">YouTube </a>
-             
-            </div>
-          </div>
+       
+         
         </div>
         
           
