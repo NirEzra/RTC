@@ -12,6 +12,7 @@ import HomePage from "../components/HomePage";
 import CartScreen from "../components/CartScreen";
 import Galeryy from "../components/Galeryy"
 import ContactUs from "../components/ContactUs"
+import About from "../components/About"
 
 function AppRouter() {
   return (
@@ -27,6 +28,7 @@ function AppRouter() {
       <Route path="/updateProfile" component={UpdateProfile} />
       <Route path="/gallery" component={Galeryy} />
       <Route path="/contact" component={ContactUs} />
+      <Route path="/about" component={About} />
     </Switch>
 
   )

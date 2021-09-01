@@ -51,6 +51,8 @@
     display: flex;
     max-width: 100%;
     overflow-x: hidden;
+    align-items:center;
+    justify-content: center;
   }
   
   .carousel__image-selected {
@@ -59,9 +61,10 @@
   }
   
   .carousel__image {
-    margin-right: 10px;
-    height: 150px;
-    min-width: 150px;
+    margin-right: 5px;
+   justify-content:space-evenly;
+    height: 120px;
+    min-width: 120px;
     border: 3px solid #ffa70000;
     background-position: center center;
     background-repeat: no-repeat;
