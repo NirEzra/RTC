@@ -1,18 +1,43 @@
-import React, { useState } from 'react'
-import products from "../MyProducts";
+import React, { useState, useEffect } from 'react'
 import { Row, Col, Image, ListGroup, Card, Button, Form } from "react-bootstrap";
-import { useParams,useHistory, Link } from "react-router-dom";
+import { useParams, useHistory, Link } from "react-router-dom";
 import '../style/ProductScreen.css'
+import { useSelector, useDispatch } from 'react-redux'
+import { cart_add_item} from '../features/cartItems/CartItems'
+
 
 const ProductScreen = () => {
     let { id } = useParams();
-    const product = products.find(p => p._id === id) || 1;
-    const [qty, setQty] = useState(1)
     const history = useHistory()
+    const dispatch = useDispatch()
+    const [qty, setQty] = useState(1)
+
+
+    const ProductDetails = useSelector(state => state.productDetails)
+    const products = useSelector((state) => state.productList.products)
+    let correntItem = products.find(x => x._id === id)
+    const itemQty = correntItem && ({ ...correntItem, qty: Number(qty) })
+    
+    // console.log(correntItem);
+    // const newObj =
+    // correntItem.qty = qty
+    // console.log(newObj);
+    // }
+    // console.log({ correntItem })
+    const { loading } = ProductDetails
+
+    const product = products.find(p => p._id === id) || [];
 
     const addToCartHandler = () => {
-        history.push(`/cart/${id}?qty=${qty}`)
+        if (itemQty) {
+            dispatch(cart_add_item(itemQty))
+            history.push(`/cart/${id}?qty=${qty}`)
+        }
     }
+
+    useEffect(() => {
+
+    }, [])
 
     return (
         <div style={{ marginTop: "10vh", width: '90%', margin: "10vh auto" }}>
@@ -29,7 +54,7 @@ const ProductScreen = () => {
                             <h3>{product.name}</h3>
                         </ListGroup.Item>
                         <ListGroup.Item>
-                            Price: ${product.price}
+                            Price: ${Number(product.price)}
                         </ListGroup.Item>
                         <ListGroup.Item>
                             Dscription: ${product.description}
@@ -81,10 +106,9 @@ const ProductScreen = () => {
                                 </ListGroup.Item>
                             )}
 
-
                             <ListGroup.Item variant='flush'>
                                 <Button
-                                onClick={addToCartHandler}
+                                    onClick={addToCartHandler}
                                     className='btn-block'
                                     type='button'
                                     disabled={product.countInStock === 0}>

@@ -1,27 +1,23 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import MyProducts from '../../MyProducts'
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface CounterState {
-  error: null
+  error: null;
 }
 
 const initialState: CounterState = {
   error: null,
-}
+};
 
 export const counterSlice = createSlice({
-  name: 'error',
+  name: "error",
   initialState,
   reducers: {
     got_error: (state, action: PayloadAction<any>) => {
-      state.error = action.payload
-      // console.log(state.products);   
+      state.error = action.payload;
     },
-  
   },
-})
+});
 
-// Action creators are generated for each case reducer function
-export const { got_error} = counterSlice.actions
+export const { got_error } = counterSlice.actions;
 
-export default counterSlice.reducer
+export default counterSlice.reducer;

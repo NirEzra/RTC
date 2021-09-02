@@ -1,18 +1,18 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import SignUp from "./SignUp"
-import Login from "./Login"
-import PrivateRoute from "./PrivateRoute"
-import Dashboard from "./Dashboard";
-import ForgotPassword from './ForgotPassword'
-import UpdateProfile from "./UpdateProfile";
-import ProductScreen from "../components/ProductScreen";
-import HomePage from "../components/HomePage";
-import CartScreen from "../components/CartScreen";
-import Galeryy from "../components/Galeryy"
-import ContactUs from "../components/ContactUs"
-import About from "../components/About"
+import SignUp from "../firebaseAuth/SignUp"
+import Login from "../firebaseAuth/Login"
+import PrivateRoute from "../firebaseAuth/PrivateRoute"
+import Dashboard from "../firebaseAuth/Dashboard";
+import ForgotPassword from '../firebaseAuth/ForgotPassword'
+import UpdateProfile from "../firebaseAuth/UpdateProfile";
+import ProductScreen from "./ProductScreen";
+import HomePage from "./HomePage";
+import CartScreen from "./CartScreen";
+import Galeryy from "./Galeryy"
+import ContactUs from "./ContactUs"
+import About from "./About"
 
 function AppRouter() {
   return (
@@ -29,6 +29,7 @@ function AppRouter() {
       <Route path="/gallery" component={Galeryy} />
       <Route path="/contact" component={ContactUs} />
       <Route path="/about" component={About} />
+      
     </Switch>
 
   )

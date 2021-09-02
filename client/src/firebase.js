@@ -1,6 +1,7 @@
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/storage';
+import firebase from 'firebase/app'
+import 'firebase/auth'
+import 'firebase/firestore';
+
 
 const app = firebase.initializeApp({
     apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -13,44 +14,8 @@ const app = firebase.initializeApp({
 
 })
 
-// const restaurantRepo = new RestaurantRepository();
 
-// // Saving data
-// const restaurant = await restaurantRepo.save({
-//   name: 'FreshFoods',
-//   address: 'SomeStreet 123',
-//   city: 'New York',
-//   type: 'vegan'
-// });
-
-// console.log(restaurant);
-// /*
-// {
-//   id: '0vdxYqEisf5vwJLhyLjA',
-//   name: 'FreshFoods',
-//   address: 'SomeStreet 123',
-//   city: 'New York',
-//   type: 'vegan',
-//   createdAt: Date('2019-04-29T16:35:33.195Z'),
-//   updatedAt: Date('2019-04-29T16:35:33.195Z')
-// }*/
-
-// // Listing all documents
-// const allRestaurants = await restaurantRepo.list();
-
-// // Filtering documents based on attributes
-// const restaurantsInNewYork = await restaurantRepo.list({
-//   city: 'New York'
-// });
-
-// // More complex queries
-// const date = new Date('2019-02-01');
-// const restaurants = await restaurantRepo.query((qb) => {
-//   return qb
-//     .where('openDate', '<=', date)
-//     .orderBy('openDate', 'asc');
-// });
 
 export const auth = app.auth()
-
+export const db = app.firestore()
 export default app

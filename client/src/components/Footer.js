@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
         </section>
         
-        <div className='footer-links'>
+        {/* <div className='footer-links'>
 
             <div className='footer-link-items'>
             <h2>About</h2>
@@ -54,9 +54,9 @@ export default function Footer() {
             </div>
        
          
-        </div>
+        </div> */}
         
-          
+          <br/>
           
           
                           <p className="copyright"><a className="link" href="https://www.linkedin.com/in/tal-mamistvalov/" target="_blank" rel="noreferrer">Tal

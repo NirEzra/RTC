@@ -1,26 +1,24 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface CounterState {
-  loading: boolean
+  loading: boolean;
 }
 
 const initialState: CounterState = {
   loading: false,
-}
+};
 
 export const counterSlice = createSlice({
-  name: 'loading',
+  name: "loading",
   initialState,
   reducers: {
     IsLoading: (state) => {
-      state.loading = false
-     
+      state.loading = true;
     },
-    
   },
-})
+});
 
-// Action creators are generated for each case reducer function
-export const { IsLoading} = counterSlice.actions
 
-export default counterSlice.reducer
+export const { IsLoading } = counterSlice.actions;
+
+export default counterSlice.reducer;
